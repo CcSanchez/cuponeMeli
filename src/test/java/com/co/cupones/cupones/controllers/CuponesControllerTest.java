@@ -116,4 +116,21 @@ class CuponesControllerTest {
         assertEquals(HttpStatus.OK, cupones.getStatusCode());
     }
 
+    @Test
+    void okTotalMenorAmount() {
+        String url = URL + port + END_POINT;
+        CuponesInDto cuponesInDto = new CuponesInDto();
+        List<String> items_id = new ArrayList<>();
+        items_id.add("MLA816019440");
+        items_id.add("MLA811601010");
+        items_id.add("MLA919368645");
+        items_id.add("MLA932252932");
+        items_id.add("MLA886405818");
+        items_id.add("MLA913010868");
+        cuponesInDto.setItem_ids(items_id);
+        cuponesInDto.setAmount(1000000);
+        ResponseEntity<CuponesOutDto> cupones = this.restTemplate.postForEntity(url, cuponesInDto, CuponesOutDto.class);
+        assertEquals(HttpStatus.OK, cupones.getStatusCode());
+    }
+
 }

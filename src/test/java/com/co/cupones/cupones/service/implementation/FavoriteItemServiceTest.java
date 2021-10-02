@@ -41,11 +41,11 @@ class FavoriteItemServiceTest {
         // Obteniendo respuesta esperada
         List<Map<String, Integer>> listPrueba = new ArrayList<>();
         Map<String, Integer> prueba = new HashMap<>();
-        prueba.put("MLA816019440", 3);
-        prueba.put("MLA811601010", 3);
-        prueba.put("MLA919368645", 3);
-        prueba.put("MLA932252932", 3);
-        prueba.put("MLA886405818", 2);
+        prueba.put("MLA816019440", 1);
+        prueba.put("MLA811601010", 1);
+        prueba.put("MLA919368645", 1);
+        prueba.put("MLA932252932", 1);
+        prueba.put("MLA886405818", 1);
         listPrueba.add(prueba);
         List<Map<String, Integer>> list = favoriteItemService.getFavoriteItems();
         Assertions.assertArrayEquals(listPrueba.toArray(),list.toArray());
