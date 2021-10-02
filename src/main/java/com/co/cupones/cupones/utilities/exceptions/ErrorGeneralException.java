@@ -8,10 +8,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 )
 public class ErrorGeneralException extends Exception {
 
-    public ErrorGeneralException(String mensaje) {
-        super(mensaje);
-    }
-
     public ErrorGeneralException(Throwable cause) {
         super(cause);
     }

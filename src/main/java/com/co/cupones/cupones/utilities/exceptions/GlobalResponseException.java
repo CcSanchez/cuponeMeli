@@ -55,11 +55,5 @@ public class GlobalResponseException {
         return new ValidationError(objectError.getObjectName(), objectError.getDefaultMessage());
     }
 
-    private static Throwable obtenerUltimaExcepcion(Throwable e) {
-        if (e.getCause() != null) {
-            return obtenerUltimaExcepcion(e.getCause());
-        }
-        return e;
-    }
 
 }
